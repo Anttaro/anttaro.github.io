@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":null,"post_block":"fadeIn","post_header":null,"post_body":null,"coll_header":null,"sidebar":"fadeInDown"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="1. 搭建框架参考文章参考文章：2022 Hexo 博客搭建和使用教程(Windows) - codingpath的文章 - 知乎 第五部分更换主题的时候使用“next”主题，其他基本照做，无坑，跟着文章做下来就可以顺利搭建静态博客。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="静态博客搭建过程记录">
+<meta property="og:url" content="http://example.com/2023/03/20/00%E6%8C%87%E5%8D%97/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. 搭建框架参考文章参考文章：2022 Hexo 博客搭建和使用教程(Windows) - codingpath的文章 - 知乎 第五部分更换主题的时候使用“next”主题，其他基本照做，无坑，跟着文章做下来就可以顺利搭建静态博客。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-20T14:30:41.000Z">
+<meta property="article:modified_time" content="2023-05-12T04:51:21.688Z">
+<meta property="article:author" content="天风自霄汉">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/03/20/00%E6%8C%87%E5%8D%97/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/03/20/00%E6%8C%87%E5%8D%97/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/","path":"2023/03/20/00指南/静态博客搭建过程记录/","title":"静态博客搭建过程记录"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>静态博客搭建过程记录 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">10</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">36</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%90%AD%E5%BB%BA%E6%A1%86%E6%9E%B6%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-text">1. 搭建框架参考文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%8E%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96"><span class="nav-text">2. 自定义与主题美化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-text">2.1 自定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-NexT%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96"><span class="nav-text">2.2 NexT主题美化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E6%A0%87%E7%AD%BE%E3%80%81%E5%88%86%E7%B1%BB%E5%92%8C%E7%9B%AE%E5%BD%95"><span class="nav-text">2.3 标签、分类和目录</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-1-%E6%A0%87%E7%AD%BE"><span class="nav-text">2.3.1 标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-2-%E5%88%86%E7%B1%BB"><span class="nav-text">2.3.2 分类</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-3-%E7%9B%AE%E5%BD%95"><span class="nav-text">2.3.3 目录</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-%E4%B8%80%E4%BA%9Btips"><span class="nav-text">2.4 一些tips</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B4%AD%E4%B9%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D%EF%BC%88%E9%9D%9E%E5%BF%85%E9%A1%BB%EF%BC%89"><span class="nav-text">3. 购买自己的域名（非必须）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9C%AA%E9%9B%A8%E7%BB%B8%E7%BC%AA-%E5%A6%82%E6%9E%9C%E6%9C%AA%E6%9D%A5%E8%A6%81%E6%8D%A2%E7%94%B5%E8%84%91"><span class="nav-text">4. 未雨绸缪 - 如果未来要换电脑</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">天风自霄汉</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/20/00%E6%8C%87%E5%8D%97/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="天风自霄汉">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="静态博客搭建过程记录 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          静态博客搭建过程记录
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-20 22:30:41" itemprop="dateCreated datePublished" datetime="2023-03-20T22:30:41+08:00">2023-03-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-05-12 12:51:21" itemprop="dateModified" datetime="2023-05-12T12:51:21+08:00">2023-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index"><span itemprop="name">指南</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="1-搭建框架参考文章"><a href="#1-搭建框架参考文章" class="headerlink" title="1. 搭建框架参考文章"></a>1. 搭建框架参考文章</h3><p>参考文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/547520780">2022 Hexo 博客搭建和使用教程(Windows) - codingpath的文章 - 知乎</a></p>
+<p>第五部分更换主题的时候使用“next”主题，其他基本照做，无坑，跟着文章做下来就可以顺利搭建静态博客。<span id="more"></span>另在source文件夹下新建一个image文件夹，图片放在这个文件夹中，在typora中正常插入，路径改为<code>![](/image/xxx.jpg)</code>，或者使用图床插入 Markdown 链接也可以。</p>
+<h3 id="2-自定义与主题美化"><a href="#2-自定义与主题美化" class="headerlink" title="2. 自定义与主题美化"></a>2. 自定义与主题美化</h3><h4 id="2-1-自定义"><a href="#2-1-自定义" class="headerlink" title="2.1 自定义"></a>2.1 自定义</h4><p>参考文章：<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_11378682/3661194">用Hexo搭建博客（二）——修改基本内容</a></p>
+<p>打开hexo下的配置文件（_config文件），修改作者，把语言设置为中文 zh-CN：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle: &#x27;&#x27;</span><br><span class="line">description: &#x27;&#x27;</span><br><span class="line">keywords:</span><br><span class="line">author: 天风剑峰</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>文章置顶：</p>
+<p>在hexo文件夹下右键 Git Bash Here，输入：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>然后在需要置顶的文章题头加入<code>top: true</code>即可。</p>
+<h4 id="2-2-NexT主题美化"><a href="#2-2-NexT主题美化" class="headerlink" title="2.2 NexT主题美化"></a>2.2 NexT主题美化</h4><p>NexT默认主题略有些简陋，希望DIY以下功能：加入左栏的标签、归档等功能；单篇文章可以在左栏显示大纲目录（后来发现大纲目录是默认自带的功能）。注：本地编辑.md文件可以打出空行，但是在静态博客上空行不会被显示，因此排版时尽量使用分隔线代替空行。</p>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://ywang-wnlo.github.io/posts/9a0b7c3b.html">NexT主题的配置使用记录</a>。在配置时修改了的部分均在下文列出，没有说明的部分全部保留默认设置，不加改动。若无特别说明，所有改动都在<code>theme\next\_config</code> 文件中修改。</p>
+<p>在四个主题中选择Gemini，其他主题注释掉：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>菜单栏开启首页、标签、分类、归档四个项目，后两项都改为true：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  #about: /about/ || fa fa-user</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  #schedule: /schedule/ || fa fa-calendar</span><br><span class="line">  #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: /404/ || fa fa-heartbeat</span><br><span class="line"></span><br><span class="line"># Enable / Disable menu icons / item badges.</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: true</span><br></pre></td></tr></table></figure>
+
+<p>动画部分按这个设置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">motion:</span><br><span class="line">  enable: true</span><br><span class="line">  async: true</span><br><span class="line">  transition:</span><br><span class="line">    # All available transition variants: https://theme-next.js.org/animate/</span><br><span class="line">    menu_item:</span><br><span class="line">    post_block: fadeIn</span><br><span class="line">    post_header:</span><br><span class="line">    post_body:</span><br><span class="line">    coll_header:</span><br><span class="line">    # Only for Pisces | Gemini.</span><br><span class="line">    sidebar: fadeInDown</span><br></pre></td></tr></table></figure>
+
+<p>回到顶部的按钮，其上显示已阅读百分比：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">back2top:</span><br><span class="line">  enable: true</span><br><span class="line">  # Back to top in sidebar.</span><br><span class="line">  sidebar: false</span><br><span class="line">  # Scroll percent label in b2t button.</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<p>打开lazyload按需加载，避免一次性加载导致的网页打开缓慢：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Vanilla JavaScript plugin for lazyloading images.</span><br><span class="line"># For more information: https://apoorv.pro/lozad.js/demo/</span><br><span class="line">lazyload: true</span><br></pre></td></tr></table></figure>
+
+<p>打开fancybox，在点击图片的时候可以放大该图片：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.</span><br><span class="line"># For more information: https://fancyapps.com/fancybox/</span><br><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
+
+<p>打开版权声明：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">creative_commons:</span><br><span class="line">  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  # Available values: big | small</span><br><span class="line">  size: small</span><br><span class="line">  sidebar: false</span><br><span class="line">  post: true</span><br><span class="line">  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh</span><br><span class="line">  # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3-标签、分类和目录"><a href="#2-3-标签、分类和目录" class="headerlink" title="2.3 标签、分类和目录"></a>2.3 标签、分类和目录</h4><p>参考文章见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_48927364/article/details/123295436">NexT主题使用攻略基础——添加分类、标签及关于</a>。</p>
+<h5 id="2-3-1-标签"><a href="#2-3-1-标签" class="headerlink" title="2.3.1 标签"></a>2.3.1 标签</h5><p>标签页生成：在hexo文件夹中（沿用第一篇参考文章的设定）右键<strong>Git Bash Here</strong>，输入<code>hexo new page tags</code>，运行后如图：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lenovo@LAPTOP-NOF3TV25 MINGW64 /e/my_SEC/hexo</span><br><span class="line">$ hexo new page tags</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: E:\my_SEC\hexo\source\tags\index.md</span><br></pre></td></tr></table></figure>
+
+<p>在上面显示的路径：hexo\source\tags 文件夹里找到 index.md 文件，打开这个文件，在 front matter  中、date那一行下面，紧接着加上一行<code>type: &quot;tags&quot;</code>。写文章要加入标签时，在 front matter 部分加入<code>tags: [标签1,标签2]</code>就可以了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2023-03-20 23:33:17</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
+
+<p>配适手机端，把这个 layout 选项改为 true：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Reduce padding / margin indents on devices with narrow width.</span><br><span class="line">mobile_layout_economy: true</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2-3-2-分类"><a href="#2-3-2-分类" class="headerlink" title="2.3.2 分类"></a>2.3.2 分类</h5><p>类似地，在 hexo 文件夹中右键 <strong>Git Bash Here</strong>，输入<code>	hexo new page categories</code>，运行后按照输出找到这个文件：<code>hexo\source\categories\index.md</code>，打开该文件，在 front matter中、date 那一行之后，添加代码<code>	type: &quot;categories&quot;</code>。需要将分类赋予文章的时候与标签同理，在文章的 front matter 中添加。</p>
+<h5 id="2-3-3-目录"><a href="#2-3-3-目录" class="headerlink" title="2.3.3 目录"></a>2.3.3 目录</h5><p>在 next 主题的配置文件中更改。目录打开自动换行，关闭目录自动编号，关闭多级目录全部展开</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Table of Contents in the Sidebar</span><br><span class="line"># Front-matter variable (nonsupport wrap expand_all).</span><br><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  # Automatically add list number to toc.</span><br><span class="line">  number: false</span><br><span class="line">  # If true, all words will placed on next lines if header width longer then sidebar width.</span><br><span class="line">  wrap: true</span><br><span class="line">  # If true, all level of TOC in a post will be displayed, rather than the activated part of it.</span><br><span class="line">  expand_all: false</span><br><span class="line">  # Maximum heading depth of generated toc.</span><br><span class="line">  max_depth: 6</span><br></pre></td></tr></table></figure>
+
+<p>注：在首页中，希望不要显示完整文章，而是只显示一部分文字预览，可以在编辑文章的时候加入<code>&lt;!-- more --&gt;</code>来手动隔断显示和隐藏的部分。</p>
+<h4 id="2-4-一些tips"><a href="#2-4-一些tips" class="headerlink" title="2.4 一些tips"></a>2.4 一些tips</h4><p>在hexo&#x2F;source&#x2F;_posts文件夹中创建新文件的时候，可以在_post文件夹中任意创建子文件夹，以便于管理文档，但是在部署之后，引用这些文档的地址会根据子文件夹的不同而变化，导致编写目录、访问链接上的麻烦。解决方式是修改配置文件，保证文章链接一经生成永不更改，这个功能目前还未实现，参考文章：<a target="_blank" rel="noopener" href="https://prinsss.github.io/hexo-posts-in-subfolder/">使用子文件夹管理 Hexo 文章且不改变文章永久链接</a></p>
+<p>在每个文件最开头，标明文章标题、发布时间等的那个“题头”叫做“Front Matter”，需要查询其相关功能的时候可以搜关键词。更多关于 typora 的使用技巧参看这篇文章：<a target="_blank" rel="noopener" href="https://sspai.com/post/54912/">Typora 完全使用详解</a></p>
+<h3 id="3-购买自己的域名（非必须）"><a href="#3-购买自己的域名（非必须）" class="headerlink" title="3. 购买自己的域名（非必须）"></a>3. 购买自己的域名（非必须）</h3><p>在不挂梯子的情况下，github.io网页访问比较不稳定，有时候可以进，有时候加载不出来。自己买一个域名可以更方便地访问。2023-03-23更新：目前看来访问还是比较稳定的，暂时就不用自己DIY域名了。</p>
+<h3 id="4-未雨绸缪-如果未来要换电脑"><a href="#4-未雨绸缪-如果未来要换电脑" class="headerlink" title="4. 未雨绸缪 - 如果未来要换电脑"></a>4. 未雨绸缪 - 如果未来要换电脑</h3><p>hexo\source文件夹里面存储了所有.md文件，包括文章、标签和图片。hexo的配置文件与NexT的配置文件需要编辑。或许直接把hexo文件夹移过去？</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>天风自霄汉
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2023/03/20/00%E6%8C%87%E5%8D%97/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" title="静态博客搭建过程记录">http://example.com/2023/03/20/00指南/静态博客搭建过程记录/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/20/00%E6%8C%87%E5%8D%97/%E7%9B%AE%E5%BD%95/" rel="prev" title="置顶 | 目录">
+                  <i class="fa fa-chevron-left"></i> 置顶 | 目录
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/03/23/03%E8%80%83%E6%8D%AE%E6%9D%82%E8%B0%88/001%E8%B5%B5%E4%BA%91%E6%B1%89%E6%B0%B4%E4%B9%8B%E6%88%98/" rel="next" title="【赵云】杂谈·汉水之战空营计">
+                  【赵云】杂谈·汉水之战空营计 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">天风自霄汉</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>
